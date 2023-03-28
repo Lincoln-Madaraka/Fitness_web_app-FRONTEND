@@ -2,10 +2,26 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        lavender: "#f0e7f4",
+        black: "#000",
+        white: "#fff",
+        plum: "#876a9d",
+        snow: "#fffafa",
+        dimgray: "#5a4b62",
+      },
+      screens: {
+        xl: { max: '767px' },
+      },
+      fontFamily: { inter: "Inter" },
+      borderRadius: { "3xs": "10px" },
+    },
+    fontSize: { "11xl": "30px" },
   },
-  plugins: [],
-}
+  corePlugins: { preflight: false },
+};
+
