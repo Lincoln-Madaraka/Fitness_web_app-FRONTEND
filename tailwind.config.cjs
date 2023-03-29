@@ -15,6 +15,10 @@ module.exports = {
         plum: "#876a9d",
         snow: "#fffafa",
         dimgray: "#5a4b62",
+        gray: { "100": "#fffefe", "200": "rgba(0, 0, 0, 0.81)" },
+        salmon: "#ff6f6f",
+        black: "#000",
+        whitesmoke: "#f6f6f6",
       },
       screens: {
         xl: { max: '767px' },
@@ -22,9 +26,10 @@ module.exports = {
       fontFamily: { inter: "Inter" },
       borderRadius: { "3xs": "10px" },
     },
-    fontSize: { "11xl": "30px" },
+    fontSize: { "11xl": "30px", "6xl": "25px" },
   },
   corePlugins: { preflight: false },
 };
+
 
 

@@ -1,21 +1,25 @@
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Page(){
   const navigate = useNavigate();
 
-  const handleClick = ()=>{
+  const handleLogIn = ()=>{
       navigate("/form");
+  }
+
+  const handleRegister = ()=>{
+    navigate("/register");
   }
 
     return (
         <div className="relative bg-white w-full h-[600px] overflow-hidden text-left text-6xl text-midnightblue font-inter">
           <div className="absolute top-[0px] left-[60px] bg-white w-full h-[1024px] overflow-hidden">
-          <button onClick={handleClick} className="cursor-pointer [border:none] p-0 bg-lavender absolute top-[24px] right-[320px] rounded-3xs w-[117px] h-[62px] hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
+          <button onClick={handleRegister} className="cursor-pointer [border:none] p-0 bg-lavender absolute top-[24px] right-[320px] rounded-3xs w-[117px] h-[62px] hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
               <h2 className=" tracking-[0.01em] capitalize font-bold mix-blend-normal">
                   Sign Up
               </h2>
             </button>
-            <button onClick={handleClick} className="cursor-pointer [border:none] p-0 bg-lavender absolute top-[24px] right-[150px] rounded-3xs  w-[139px] h-[62px] hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
+            <button onClick={handleLogIn} className="cursor-pointer [border:none] p-0 bg-lavender absolute top-[24px] right-[150px] rounded-3xs  w-[139px] h-[62px] hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
               <h2 className=" tracking-[0.01em] capitalize font-bold mix-blend-normal">
                   Log In
               </h2>
@@ -28,7 +32,7 @@ function Page(){
               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
               pariatur.
             </div>
-            <button onClick={handleClick} className="cursor-pointer [border:none] p-0 bg-lavender absolute top-[449px] left-[481px] rounded-3xs  w-56 h-[62px] hover:mix-blend-darken hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
+            <button onClick={handleLogIn} className="cursor-pointer [border:none] p-0 bg-lavender absolute top-[449px] left-[481px] rounded-3xs  w-56 h-[62px] hover:mix-blend-darken hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
               <h2 className=" tracking-[0.01em] capitalize font-bold mix-blend-normal">
                 JOIN NOW
               </h2>
