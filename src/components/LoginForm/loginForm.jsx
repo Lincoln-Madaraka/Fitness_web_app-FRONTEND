@@ -1,6 +1,6 @@
 export default function loginForm(){
     return (
-        <div className="relative bg-lavender w-full h-[1024px] overflow-hidden text-center text-11xl text-dimgray font-inter">
+        <div className="relative overflow-hidden bg-lavender w-full h-[745px] text-center text-11xl text-dimgray font-inter">
           <img
             className="absolute top-[510px] left-[537px] w-[618px] h-[555px]"
             alt=""
@@ -29,9 +29,6 @@ export default function loginForm(){
               autoFocus
             >
             <h1 className="text-center font-bold text-white [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">Log In</h1>
-            {/* <a >
-              Log In
-            </a> */}
             </button>
           </form>
           <img

@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       colors: {
         lavender: "#f0e7f4",
+        midnightblue: "#110435",
+        gray: "#908091",
         black: "#000",
         white: "#fff",
         plum: "#876a9d",
@@ -24,4 +26,5 @@ module.exports = {
   },
   corePlugins: { preflight: false },
 };
+
 
