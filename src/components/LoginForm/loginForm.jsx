@@ -10,20 +10,28 @@ export default function loginForm(){
             className="absolute top-[200px] left-[815px] rounded-[30px] bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[565px] h-[520px] overflow-hidden"
             id="form"
           >
-            <div className="absolute top-[85px] left-[27px] font-semibold">
+            <label 
+            for="username"
+             className="absolute top-[85px] left-[27px] font-semibold">
               Username
-            </div>
+            </label>
             <input
               className="[border:none] bg-snow absolute top-[129px] left-[27px] rounded-3xs shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[488px] h-[62px]"
               type="text"
+              name="username"
             />
-            <div className="absolute top-[222px] left-[30px] font-semibold text-plum">
+
+            <label
+            for="password" 
+            className="absolute top-[222px] left-[30px] font-semibold text-plum">
               Password
-            </div>
+            </label>
             <input
               className="[border:none] bg-snow absolute top-[274px] left-[30px] rounded-3xs shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[488px] h-[62px]"
               type="text"
+              name="password"
             />
+
             <button
               className="cursor-pointer [border:none]  bg-plum absolute top-[367px] left-[30px] rounded-3xs shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[488px] h-[62px]"
               autoFocus
