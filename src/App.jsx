@@ -3,12 +3,12 @@ import{
   Route,
   BrowserRouter,
 } from "react-router-dom";
-import LoginForm from "./components/LoginForm/loginForm"
-import Page from "./components/home/Page"
-import Register from "./components/LoginForm/Register"
-import './App.css'
+import LoginForm from "./pages/LogIn"
+import Page from "./pages/LandingPage"
+import Register from "./pages/SignIn"
 
 function App() {
+  
   return (
     <BrowserRouter>
     <Routes>
@@ -21,4 +21,4 @@ function App() {
       
 }
 
-export default App
+export default App;
