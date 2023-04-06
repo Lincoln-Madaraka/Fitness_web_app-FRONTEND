@@ -7,14 +7,14 @@ const ShowCardForm = ({
   googleTop,
   googleLeft,
 }) => {
-  const formStyle = useMemo(() => {
+const formStyle = useMemo(() => {
     return {
       position: googlePosition,
       flexShrink: googleFlexShrink,
       top: googleTop,
       left: googleLeft,
     };
-  }, [googlePosition, googleFlexShrink, googleTop, googleLeft]);
+}, [googlePosition, googleFlexShrink, googleTop, googleLeft]);
 
   return (
     <form className="flex-1 relative w-[370px]" style={formStyle}>

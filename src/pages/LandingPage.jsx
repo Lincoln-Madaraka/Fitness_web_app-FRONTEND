@@ -6,6 +6,7 @@ import QuestionAnswer from "../components/QuestionAnswer";
 import Footer from "../components/Footer";
 
 function LandingPage(){
+  
   return (
     <div className="relative bg-white w-full flex flex-col items-center justify-start text-left text-base text-gray-1000 font-inter">
       <Navbar />

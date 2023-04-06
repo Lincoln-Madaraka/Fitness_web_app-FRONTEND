@@ -1,4 +1,4 @@
-const Navbar = () => {
+function Navbar(){
   return (
     <nav className="self-stretch relative bg-royalblue h-[85px] shrink-0">
       <div className="absolute top-[34px] left-[221px] text-11xl leading-[80px] font-bold font-inter text-white text-left flex items-center w-[133px] h-[21px]">

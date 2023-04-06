@@ -1,4 +1,4 @@
-const AgreeAndJoinForm = () => {
+function AgreeAndJoinForm(){
   return (
     <form className="absolute top-[100px] left-[calc(50%_-_200px)] rounded-t-lg rounded-b-none bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] flex flex-col p-6 items-center justify-center gap-[15px]">
       <label className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">

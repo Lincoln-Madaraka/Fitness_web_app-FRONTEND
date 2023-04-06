@@ -8,6 +8,7 @@ import Page from "./pages/LandingPage"
 import Register from "./pages/SignIn"
 
 function App() {
+  
   return (
     <BrowserRouter>
     <Routes>

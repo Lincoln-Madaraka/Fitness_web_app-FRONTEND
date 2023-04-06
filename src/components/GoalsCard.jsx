@@ -1,4 +1,4 @@
-const GoalsCard = () => {
+function GoalsCard(){
   return (
     <div className="self-stretch flex flex-col py-[100px] px-[377px] items-center justify-start gap-[50px] text-center text-29xl text-gray-1000 font-inter lg:pl-[377px] lg:box-border md:pl-[100px] md:pr-[100px] md:box-border sm:py-[50px] sm:px-2.5 sm:box-border">
       <div className="overflow-hidden flex flex-row items-start justify-start bg-[url(/public/span@3x.png)] bg-cover bg-no-repeat bg-[top]">

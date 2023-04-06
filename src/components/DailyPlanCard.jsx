@@ -1,4 +1,4 @@
-const DailyPlanCard = () => {
+function DailyPlanCard(){
   return (
     <div className="self-stretch [background:linear-gradient(200deg,_#0066ee_60%,_#9383fb)] overflow-hidden flex flex-row py-[100px] px-[275px] items-center justify-start gap-[55px] text-left text-base text-whitesmoke font-inter md:flex-col sm:flex-col sm:py-[50px] sm:px-[30px] sm:box-border">
       <div className="self-stretch flex-1 flex flex-col items-start justify-center gap-[18px] md:flex-[unset] md:self-stretch sm:flex-[unset] sm:self-stretch sm:h-auto">

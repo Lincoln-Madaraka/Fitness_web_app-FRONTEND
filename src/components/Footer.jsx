@@ -1,4 +1,4 @@
-const Footer = () => {
+function Footer(){
   return (
     <footer className="self-stretch bg-gray-200 flex flex-col py-[17px] px-[154px] items-center justify-center text-left text-2xs text-gray-100 font-inter lg:self-stretch lg:w-auto md:self-stretch md:w-auto sm:self-stretch sm:w-auto sm:h-auto">
       <div className="relative w-[168px] h-[37px] shrink-0">

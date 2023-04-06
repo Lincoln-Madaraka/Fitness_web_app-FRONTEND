@@ -1,4 +1,4 @@
-const HeroSection = () => {
+function HeroSection(){
   return (
     <div className="self-stretch [background:linear-gradient(200deg,_#0066ee_60%,_#9383fb)] flex flex-row py-[91px] px-[339px] items-center justify-center gap-[38px] text-left text-base text-white font-inter lg:flex-col md:self-stretch md:w-auto md:flex-1 md:flex-col md:pl-[100px] md:pr-[100px] md:box-border sm:self-stretch sm:w-auto sm:flex-col sm:gap-[60px] sm:py-[100px] sm:px-2.5 sm:box-border">
       <div className="self-stretch flex-1 flex flex-col items-start justify-start gap-[23px] lg:flex-[unset] lg:self-stretch md:flex-[unset] md:self-stretch sm:flex-[unset] sm:self-stretch sm:h-auto sm:flex-col sm:gap-[20px] sm:items-start sm:justify-between">

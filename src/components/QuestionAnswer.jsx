@@ -1,4 +1,4 @@
-const QuestionAnswer = () => {
+function QuestionAnswer(){
   return (
     <div className="self-stretch h-[957px] shrink-0 flex flex-col py-[100px] px-0 box-border items-center justify-start gap-[40px] text-center text-29xl text-gray-1000 font-inter sm:self-stretch sm:w-auto sm:h-auto">
       <h1 className="m-0 relative text-[inherit] leading-[72px] font-semibold font-inherit flex items-center justify-center w-[103.98px] h-[59px] shrink-0">{`Q&A`}</h1>
