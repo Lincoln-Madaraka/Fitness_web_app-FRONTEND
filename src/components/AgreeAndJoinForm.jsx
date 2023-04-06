@@ -1,20 +1,32 @@
 function AgreeAndJoinForm(){
   return (
     <form className="absolute top-[100px] left-[calc(50%_-_200px)] rounded-t-lg rounded-b-none bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] flex flex-col p-6 items-center justify-center gap-[15px]">
-      <label className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">
+      <label for="username" className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">
+        Username
+      </label>
+      <input
+        id="username"
+        className="bg-white relative rounded box-border w-[352px] h-8 shrink-0 border-[1px] border-solid border-gray-500"
+        type="text"
+        name="username"
+      />
+      <label for="email" className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">
         Email
       </label>
       <input
+       id="email"
         className="bg-white relative rounded box-border w-[352px] h-8 shrink-0 border-[1px] border-solid border-gray-500"
         type="text"
+        name="email"
       />
-
-      <label className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">
+      <label for="password"className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">
         Password (6 or more characters)
       </label>
       <input
+        id="password"
         className="bg-white relative rounded box-border w-[352px] h-8 shrink-0 border-[1px] border-solid border-gray-500"
         type="password"
+        name="password"
       />
 
       <button className="cursor-pointer [border:none] p-0 bg-dodgerblue relative rounded-3xl w-[352px] h-12 shrink-0 overflow-hidden">
