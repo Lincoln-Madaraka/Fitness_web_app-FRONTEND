@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import Loader from './Loader'
 function AgreeAndJoinForm() {
   const [username, setUsername] = React.useState('');
@@ -7,13 +7,8 @@ function AgreeAndJoinForm() {
   const [form, setForm] = React.useState({});
   const [token, setToken] = React.useState(null); // state to store the JWT token
   const [loading , setLoading] = React.useState(false)
-  React.useEffect(() => {
-    setForm({
-      username: username,
-      email: email,
-      password: password,
-    });
-  }, [username, email, password]);
+  
+
 
   function formHandler(event) {
     event.preventDefault(); // prevent default form submission
@@ -27,7 +22,7 @@ function AgreeAndJoinForm() {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify(form),
+            body: JSON.stringify({username,email,password}),
           }
         );
 
@@ -54,7 +49,7 @@ function AgreeAndJoinForm() {
     <>
       <form className='absolute top-[100px] left-[calc(50%_-_200px)] rounded-t-lg rounded-b-none bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] flex flex-col p-6 items-center justify-center gap-[15px]'>
       <label
-        for='username'
+        htmlFor='username'
         className='self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0'
       >
         Username
@@ -69,7 +64,7 @@ function AgreeAndJoinForm() {
         name='username'
       />
       <label
-        for='email'
+        htmlFor='email'
         className='self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0'
       >
         Email
@@ -84,7 +79,7 @@ function AgreeAndJoinForm() {
         name='email'
       />
       <label
-        for='password'
+        htmlFor='password'
         className='self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0'
       >
         Password (6 or more characters)
