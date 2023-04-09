@@ -6,6 +6,7 @@ import{
 import LoginForm from "./pages/LogIn"
 import Page from "./pages/LandingPage"
 import Register from "./pages/SignIn"
+import Quiz from "./pages/Quiz"
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
     <Route path="/" element={<Page/>}/>
     <Route path="/form" element={<LoginForm />}/>
     <Route path="/register" element={<Register/>}/>
+    <Route path="/quiz" element={<Quiz/>}/>
     </Routes>
     </BrowserRouter>
   );
