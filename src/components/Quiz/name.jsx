@@ -3,22 +3,22 @@ function Name({name, setName}){
         setName(e.target.value);
     }
 
-    return(
-        <form className="absolute top-[calc(50%_-_309px)] left-[calc(50%_-_240px)] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[481px] h-[423px]">
-          <label 
-            htmlFor="name"
-            className="cursor-pointer absolute top-[48px] left-[49px] text-11xl font-inter text-black text-left">
-            What is your name?
-          </label>
-          <input
-            name="name"
-            className="bg-[transparent] absolute top-[111px] left-[49px] rounded-3xs box-border w-[390px] h-10 border-[1px] border-solid border-black"
-            type="text"
-            value={name}
-            onChange={handleChange}
-          />
-        </form> 
-    )
+    return (
+    <form className="bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[367px] h-[199px] shrink-0 flex flex-col pt-[38px] pb-12 pr-[38px] pl-[42px] box-border items-center justify-start gap-[27px]">
+      <label 
+      htmlFor="name"
+      className="cursor-pointer self-stretch relative text-11xl font-inter text-black text-left">
+        What is your name?
+      </label>
+      <input
+        className="bg-[transparent] self-stretch rounded-3xs border-[1px] border-solid border-black"
+        type="text"
+        name="name"
+        value={name}
+        onChange={handleChange}
+      />
+    </form>
+    );
 }
 
 export default Name;
