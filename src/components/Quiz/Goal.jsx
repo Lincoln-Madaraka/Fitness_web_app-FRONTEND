@@ -1,7 +1,6 @@
 const Goal = ({goal, setGoal}) => {
     const handleChange = (e)=>{
-        setGoal(e.target.value);
-        console.log(e.target.value);
+        setGoal(e.currentTarget.value);
     }
 
     return (
@@ -16,15 +15,15 @@ const Goal = ({goal, setGoal}) => {
           value="be fit"
           onClick={handleChange}
           className="cursor-pointer [border:none] p-0 bg-[transparent] relative rounded-xl w-[287px] h-14 shrink-0 overflow-hidden bg-[url(/public/frame-5@3x.png)] bg-cover bg-no-repeat bg-[top]">
-            <div 
+            <span
             className="absolute top-[10px] left-[97px] text-11xl font-extrabold font-inter text-orange text-left">
               BE FIT
-            </div>
+            </span>
           </button>
           
           <button
           type="button"
-          data="weight loss"
+          value="weight loss"
           onClick={handleChange}
           className="cursor-pointer [border:none] p-0 bg-[transparent] relative rounded-xl w-[287px] h-[57px] shrink-0 bg-[url(/public/pexelsphotobytotalshape@3x.png)] bg-cover bg-no-repeat bg-[top]" />
         </div>

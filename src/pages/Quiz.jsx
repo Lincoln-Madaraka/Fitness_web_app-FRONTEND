@@ -39,8 +39,14 @@ const Quiz = () =>{
         setInfo({...Info, weight});
     }
 
-    const setHeight= ()=>{
+    const setHeight= (feet, inch)=>{
 
+          setInfo({
+            ...Info, 
+            height:{
+              feet,inch
+            }
+          })
     }
 
     const setGoal= (goal)=>{
@@ -50,7 +56,7 @@ const Quiz = () =>{
     const options=[
         <NameCard name={Info.name} setName={setName}/>, 
         <WeightCard weight={Info.weight} setWeight={setWeight}/>,
-        <HeightCard/>,
+        <HeightCard feet={Info.height.feet} inch={Info.height.inch} setHeight={setHeight}/>,
         <GoalsCard goal={Info.goal} setGoal={setGoal}/>
     ]
 
