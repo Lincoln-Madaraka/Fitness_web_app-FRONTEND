@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Loader from "../components/Loader" ;
 
 function RegisterForm(){
 
@@ -70,7 +71,8 @@ function RegisterForm(){
         </span>
       </div>
     </form>
+    </>
   );
-};
+}
 
-export default RegisterForm;
+export default AgreeAndJoinForm;

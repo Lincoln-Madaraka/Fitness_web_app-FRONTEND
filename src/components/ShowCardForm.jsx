@@ -1,5 +1,6 @@
-import { useMemo } from "react";
-
+import { useMemo ,useState } from "react";
+import React from 'react'
+import Loader from './Loader'
 const ShowCardForm = ({
   productId,
   googlePosition,
@@ -16,13 +17,66 @@ const formStyle = useMemo(() => {
     };
 }, [googlePosition, googleFlexShrink, googleTop, googleLeft]);
 
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const [token, setToken] = useState(null); // state to store the JWT token
+const [loading , setLoading] = useState(false) 
+
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   const res = await fetch("https://fitnesswebapp-backend-production.up.railway.app/users/login", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({ email, password }),
+//   });
+//   // handle response here
+// };
+
+const handleSubmit=async(event)=> {
+  event.preventDefault(); // prevent default form submission
+  // setLoading(true)
+  async function registerUser() {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        'https://fitnesswebapp-backend-production.up.railway.app/login',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({email,password}),
+        }
+      );
+
+      const data = await response.json();
+      // Store the JWT token in the browser's local storage
+      localStorage.setItem('token', data.token);
+      setToken(data.token);
+      setLoading(false)
+      const storedToken = localStorage.getItem('token');
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+      setLoading(false )
+    }
+  }
+
+  registerUser();
+}
+
+
   return (
-    <form className="flex-1 relative w-[370px]" style={formStyle}>
+      <>
+        <form className="flex-1 relative w-[370px]" style={formStyle} onSubmit={handleSubmit}>
       <div className="absolute top-[10.5px] left-[0px] w-[370px] h-[87px]">
         <label className="absolute top-[0px] left-[0px] text-sm leading-[21px] font-semibold font-roboto text-gray-800 text-left">
           Email or phone
         </label>
         <input
+        onChange={(e)=>{setEmail(e.target.value)}}
           className="bg-[transparent] absolute top-[28px] left-[0px] rounded box-border w-[370px] h-[59px] border-[1px] border-solid border-gray-800"
           type="text"
         />
@@ -33,6 +87,7 @@ const formStyle = useMemo(() => {
           Password
         </label>
         <input
+          onChange={(e)=>{setPassword(e.target.value)}}
           className="font-semibold font-roboto text-base bg-[transparent] self-stretch relative rounded box-border h-[59px] shrink-0 border-[1px] border-solid border-gray-800"
           type="password"
         />
@@ -42,7 +97,7 @@ const formStyle = useMemo(() => {
         Forgot password?
       </a>
 
-      <button className="cursor-pointer [border:none] p-0 bg-dodgerblue absolute top-[283.5px] left-[calc(50%_-_185px)] rounded-3xl w-[363px] h-[51px]">
+      <button type="submit" className="cursor-pointer [border:none] p-0 bg-dodgerblue absolute top-[283.5px] left-[calc(50%_-_185px)] rounded-3xl w-[363px] h-[51px]">
         <div className="absolute top-[13px] left-[175.06px] text-base font-semibold font-roboto text-white text-center flex items-center justify-center w-[50.08px] h-[25px]">
           Sign in
         </div>
@@ -73,10 +128,83 @@ const formStyle = useMemo(() => {
           New to BeFit? Join now
         </a>
       </button>
-      
-      
     </form>
+    {loading && <Loader/>}
+      </>
   );
 };
 
 export default ShowCardForm;
+
+// const ShowCardForm = ({
+//   productId,
+//   googlePosition,
+//   googleFlexShrink,
+//   googleTop,
+//   googleLeft,
+// }) => {
+//   const formStyle = useMemo(() => {
+//     return {
+//       position: googlePosition,
+//       flexShrink: googleFlexShrink,
+//       top: googleTop,
+//       left: googleLeft,
+//     };
+//   }, [googlePosition, googleFlexShrink, googleTop, googleLeft]);
+
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+
+//   const handleSubmit = async (e) => {
+//     console.log(email , password)
+//     e.preventDefault();
+//     const res = await fetch("https://fitnesswebapp-backend-production.up.railway.app/users/login", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ email:email, password:password }),
+//     });
+//     // handle response here
+//   };
+
+//   return (
+//     <form className="flex-1 relative w-[370px]" style={formStyle} onSubmit={handleSubmit}>
+//       <div className="absolute top-[10.5px] left-[0px] w-[370px] h-[87px]">
+//         <label className="absolute top-[0px] left-[0px] text-sm leading-[21px] font-semibold font-roboto text-gray-800 text-left">
+//           Email or phone
+//         </label>
+//         <input
+//           className="bg-[transparent] absolute top-[28px] left-[0px] rounded box-border w-[370px] h-[59px] border-[1px] border-solid border-gray-800"
+//           type="text"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//         />
+//       </div>
+
+//       <div className="absolute top-[111.5px] left-[0px] w-[370px] h-[101px] flex flex-col items-start justify-start gap-[9px]">
+//         <label className="relative text-smi leading-[21px] font-semibold font-roboto text-gray-800 text-left">
+//           Password
+//         </label>
+//         <input
+//           className="font-semibold font-roboto text-base bg-[transparent] self-stretch relative rounded box-border h-[59px] shrink-0 border-[1px] border-solid border-gray-800"
+//           type="password"
+//           value={password}
+//           onChange={(e) => setPassword(e.target.value)}
+//         />
+//       </div>
+
+//       <a className="[text-decoration:none] absolute top-[236.5px] left-[0px] text-base leading-[20px] font-semibold font-roboto text-dodgerblue text-left flex items-center w-[129.22px] h-[25px]">
+//         Forgot password?
+//       </a>
+
+//       <button className="cursor-pointer [border:none] p-0 bg-dodgerblue absolute top-[283.5px] left-[calc(50%_-_185px)] rounded-3xl w-[363px] h-[51px]" type="submit">
+//         <div className="absolute top-[13px] left-[175.06px] text-base font-semibold font-roboto text-white text-center flex items-center justify-center w-[50.08px] h-[25px]">
+//           Sign in
+//         </div>
+//      </button>
+//       </form>
+//   );
+// }
+
+// export default ShowCardForm;
