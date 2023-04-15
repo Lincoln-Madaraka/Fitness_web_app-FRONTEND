@@ -71,8 +71,7 @@ function RegisterForm(){
         </span>
       </div>
     </form>
-    </>
   );
 }
 
-export default AgreeAndJoinForm;
+export default RegisterForm;

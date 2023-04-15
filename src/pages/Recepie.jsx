@@ -13,6 +13,10 @@ const Recepie = () => {
   const [maxCalorie, setMaxCalorie] = useState('');
 
   const API = import.meta.env.VITE_API;
+  
+  useEffect(()=>{
+    console.log(data);
+  },[data])
 
   function getData(e) {
     e.preventDefault();
