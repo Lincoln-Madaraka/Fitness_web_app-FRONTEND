@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
+import { useDispatch } from 'react-redux';
+import { setData } from '../redux/productSlice';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * A React component that allows users to search for low carb recipes based on a specified ingredient and maximum calorie intake.
@@ -7,16 +10,19 @@ import Loader from '../components/Loader';
  */
 
 const Recepie = () => {
-  const [data, setData] = useState(''); //this is the state where all the data from food api is stored 
+
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+
+  const [data, setFoodData] = useState(''); //this is the state where all the data from food api is stored 
   const [name, setName] = useState('');
   const [loader, setLoader] = useState(false);
   const [maxCalorie, setMaxCalorie] = useState('');
 
   const API = import.meta.env.VITE_API;
-  
-  useEffect(()=>{
-    console.log(data);
-  },[data])
+
 
   function getData(e) {
     e.preventDefault();
@@ -35,7 +41,11 @@ const Recepie = () => {
       .then((res) => res.json())
       .then((json) => {
         setLoader(false);
-        setData(json);
+        setFoodData(json);
+
+        dispatch(setData(json))
+        
+        navigate("/recepies")
       })
       .catch((err) => {
         console.error('error:' + err);
@@ -43,7 +53,7 @@ const Recepie = () => {
       });
   }
 
-   
+
   return (
     <div className='relative bg-white w-full overflow-hidden flex flex-col py-[100px] px-[157px] box-border items-center justify-center'>
       <div className='self-stretch flex flex-col items-center justify-start gap-[15px]'>
@@ -82,7 +92,9 @@ const Recepie = () => {
           src='/recepie/eating.png'
         />
       </div>
-      {loader && <Loader/>}
+      {loader && <Loader />}
+
+
     </div>
   );
 };
