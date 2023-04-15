@@ -41,7 +41,7 @@ const handleSubmit=async(event)=> {
     setLoading(true);
     try {
       const response = await fetch(
-        'https://fitnesswebapp-backend-production.up.railway.app/users/login',
+        'https://fitnesswebapp-backend-production.up.railway.app/login',
         {
           method: 'POST',
           headers: {
