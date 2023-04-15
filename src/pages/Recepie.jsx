@@ -42,7 +42,7 @@ const Recepie = () => {
       .then((json) => {
         setLoader(false);
         setFoodData(json);
-
+        console.log(json);
         dispatch(setData(json))
         
         navigate("/recepies")
