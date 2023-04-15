@@ -1,4 +1,4 @@
-import AgreeAndJoinForm from "../components/AgreeAndJoinForm";
+import AgreeAndJoinForm from "../components/RegisterForm";
 
 const LogIn = () => {
   
