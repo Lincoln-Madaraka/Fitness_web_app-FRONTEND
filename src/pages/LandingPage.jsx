@@ -32,10 +32,10 @@ const LandingPage = () => {
           </h1>
           <div className="m-0 self-stretch flex flex-col items-center justify-center sm:self-stretch sm:w-auto sm:flex-1">
             <p className="m-0 flex-1 relative tracking-[-1px] leading-[28px] flex items-center w-[455.95px] lg:self-stretch lg:w-auto sm:self-stretch sm:w-auto sm:flex-1">
-              <span className="[line-break:anywhere] w-full">
+              <span className="[line-break] w-full">
                 <span className="block">
                   “Studies show people who keep a food diary are more likely to
-                  hit their goals. MyFitnessPal simplifies nutrition and calorie
+                  hit their goals. BeFit simplifies nutrition and calorie
                   tracking, provides the data you want, and helps you make sense
                   of it all.
                 </span>
@@ -57,7 +57,7 @@ const LandingPage = () => {
         </p>
         <h2 className="m-0 self-stretch relative text-xl leading-[28px] font-normal font-inherit text-left lg:self-stretch lg:w-auto md:self-stretch md:w-auto md:flex-1 sm:self-stretch sm:w-auto">
           Start training with a personal plan that guides you—while adjusting to
-          your progress, schedule and other activities. With NTC, you get access
+          your progress, schedule and other activities. With BeFit, you get access
           to four 4–6 week training plans. Whether you have access to a full gym
           or are training from the comfort of your home, there's a routine that
           fits you and your schedule so that you can reach your goals.
@@ -67,7 +67,7 @@ const LandingPage = () => {
 
       <QuizBox/>
 
-      <QuestionAnswer/>
+      {/* <QuestionAnswer/> */}
 
       <Footer/>
     </div>

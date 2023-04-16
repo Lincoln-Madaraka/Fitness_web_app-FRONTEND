@@ -5,7 +5,7 @@ const QuixBox = () => {
   const navigate = useNavigate();
 
   const handleClick=()=>{
-    navigate('/register');
+    navigate('/recepie');
   }
 
   return (
@@ -16,13 +16,13 @@ const QuixBox = () => {
       </p>
       <div className="self-stretch relative text-29xl tracking-[-1px] leading-[60px] text-white sm:self-stretch sm:w-auto sm:flex-1">
         <span className="font-light">{`Get your `}</span>
-        <b>personalized daily plan</b>
+        <b>healthy diet recipe now</b>
       </div>
       <button 
       onClick={handleClick}
       className="cursor-pointer py-3.5 pr-[47.109375px] pl-[46.109375px] bg-white rounded-25xl flex flex-row items-start justify-start gap-[0.78px] border-[2px] border-solid border-royalblue">
         <b className="relative text-base tracking-[0.5px] leading-[24px] uppercase font-inter text-royalblue text-center">
-          Take the quiz
+          Search now
         </b>
         <img
           className="relative w-6 h-6 shrink-0 overflow-hidden object-cover"

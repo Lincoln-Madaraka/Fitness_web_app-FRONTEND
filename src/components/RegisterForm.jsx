@@ -6,26 +6,32 @@ function RegisterForm(){
   const navigate = useNavigate();
 
   const handleClick= ()=>{
-    navigate('/quiz');
+    navigate('/recepie');
   }
 
   return (
     <form className="absolute top-[100px] left-[calc(50%_-_200px)] rounded-t-lg rounded-b-none bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] flex flex-col p-6 items-center justify-center gap-[15px]">
-      <label className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">
+      <label 
+      htmlFor="email"
+      className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">
         Email
       </label>
       <input
         className="bg-white relative rounded box-border w-[352px] h-8 shrink-0 border-[1px] border-solid border-gray-500"
         type="text"
+        name="email"
         required
       />
 
-      <label className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">
+      <label 
+      htmlFor="pass"
+      className="self-stretch relative text-sm leading-[20px] font-roboto text-gray-500 text-left flex items-center h-[22px] shrink-0">
         Password (6 or more characters)
       </label>
       <input
         className="bg-white relative rounded box-border w-[352px] h-8 shrink-0 border-[1px] border-solid border-gray-500"
         type="password"
+        name="pass"
         required
       />
 
@@ -35,7 +41,7 @@ function RegisterForm(){
       className="cursor-pointer [border:none] p-0 bg-dodgerblue relative rounded-3xl w-[352px] h-12 shrink-0 overflow-hidden">
         <div 
         className="absolute top-[11px] left-[129.25px] text-base leading-[40px] font-medium font-roboto text-white text-center flex items-center justify-center w-[93.7px] h-[25px]">
-        {`Agree & Join`}
+        {`Join Now`}
         </div>
       </button>
 
@@ -44,7 +50,7 @@ function RegisterForm(){
         or
       </p>
 
-      <button 
+      {/* <button 
       type="button"
       className="cursor-pointer p-0 bg-white relative rounded-xl box-border w-[325px] h-10 shrink-0 overflow-hidden border-[1px] border-solid border-gainsboro-100">
         <div className="absolute top-[13.5px] left-[104.83px] text-smi tracking-[0.25px] font-medium font-inter text-darkslategray text-center">
@@ -55,10 +61,10 @@ function RegisterForm(){
           alt=""
           src="/google@2x.png"
         />
-      </button>
+      </button> */}
 
       <div className="relative text-base leading-[24px] text-center flex items-center w-[208.32px] h-[25px] shrink-0">
-        <span className="[line-break:anywhere] w-full">
+        <span className="[line-break] w-full">
           <span className="font-roboto text-gray-600">{`Already on BeFit? `}</span>
           <a
             className="text-[inherit]"

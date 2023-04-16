@@ -14,23 +14,22 @@ const Hero = () => {
     <div className="w-[504.28px] shrink-0 flex flex-col items-start justify-center gap-[23px] lg:w-auto lg:h-auto md:flex-1 md:self-stretch md:h-auto md:pt-5 md:pb-[30px] md:box-border sm:w-auto sm:self-stretch sm:h-auto sm:flex-col sm:gap-[20px] sm:items-start sm:justify-between">
       
       <span className="self-stretch relative leading-[24px] font-semibold text-gainsboro-200 flex items-center h-5 shrink-0">
-        #1 nutrition tracking app
+        #1 Low-Calorie recipe suggesting app
       </span>
      
       <p className="m-0 self-stretch relative text-49xl leading-[80px] flex items-center h-48 shrink-0 lg:self-stretch lg:w-auto lg:flex-1 sm:text-21xl sm:text-left sm:self-stretch sm:w-auto sm:flex-1">
-        <span className="[line-break:anywhere]">
+        <span className="[line-break]">
           <b>{`Reach your goals `}</b>
           <span className="font-light">with BeFit</span>
         </span>
       </p>
 
       <span className="self-stretch relative leading-[30px] sm:self-stretch sm:w-auto sm:flex-1">
-        Build healthy habits with the all-in-one food, exercise, and calorie
-        tracker.
+        Build healthy habits with the all-in-one low-calorie-food and exercise suggestions according to your need.
       </span>
 
       <button 
-      className="cursor-pointer [border:none] py-3 pr-[42.296875px] pl-[49.296875px] bg-white rounded-113xl w-[292.81px] flex flex-row box-border items-start justify-start gap-[4.41px]"
+      className="cursor-pointer [border:none] py-3 pr-[42.296875px] pl-[49.296875px] bg-white rounded-11xl w-[292.81px] flex flex-row box-border items-start justify-start gap-[4.41px]"
       onClick={handleClick}
       >
         <a className="[text-decoration:none] relative text-base tracking-[0.25px] leading-[24px] uppercase font-bold font-inter text-royalblue text-center">
