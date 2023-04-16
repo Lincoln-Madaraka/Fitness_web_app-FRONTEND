@@ -68,7 +68,7 @@ function RegisterForm(){
           <span className="font-roboto text-gray-600">{`Already on BeFit? `}</span>
           <a
             className="text-[inherit]"
-            href="/login"
+            href="/signin"
           >
             <span className="font-semibold font-roboto text-dodgerblue">
               Sign in

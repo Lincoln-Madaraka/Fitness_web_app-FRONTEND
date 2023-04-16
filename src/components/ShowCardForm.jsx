@@ -1,6 +1,7 @@
 import { useMemo ,useState } from "react";
 import React from 'react'
 import Loader from './Loader'
+import { useNavigate } from "react-router-dom";
 const ShowCardForm = ({
   productId,
   googlePosition,
@@ -67,29 +68,43 @@ const handleSubmit=async(event)=> {
   registerUser();
 }
 
+  const navigate = useNavigate();
+
+  const handleClick= ()=>{
+    navigate('/recepie');
+  }
+
 
   return (
       <>
         <form className="flex-1 relative w-[370px]" style={formStyle} onSubmit={handleSubmit}>
       <div className="absolute top-[10.5px] left-[0px] w-[370px] h-[87px]">
-        <label className="absolute top-[0px] left-[0px] text-sm leading-[21px] font-semibold font-roboto text-gray-800 text-left">
-          Email or phone
+        <label
+         htmlFor="email"
+         className="absolute top-[0px] left-[0px] text-sm leading-[21px] font-semibold font-roboto text-gray-800 text-left">
+          Email
         </label>
         <input
         onChange={(e)=>{setEmail(e.target.value)}}
           className="bg-[transparent] absolute top-[28px] left-[0px] rounded box-border w-[370px] h-[59px] border-[1px] border-solid border-gray-800"
           type="text"
+          name="email"
+          required
         />
       </div>
 
       <div className="absolute top-[111.5px] left-[0px] w-[370px] h-[101px] flex flex-col items-start justify-start gap-[9px]">
-        <label className="relative text-smi leading-[21px] font-semibold font-roboto text-gray-800 text-left">
+        <label 
+        htmlFor="pass"
+        className="relative text-smi leading-[21px] font-semibold font-roboto text-gray-800 text-left">
           Password
         </label>
         <input
           onChange={(e)=>{setPassword(e.target.value)}}
           className="font-semibold font-roboto text-base bg-[transparent] self-stretch relative rounded box-border h-[59px] shrink-0 border-[1px] border-solid border-gray-800"
           type="password"
+          name="pass"
+          required
         />
       </div>
 
@@ -97,7 +112,9 @@ const handleSubmit=async(event)=> {
         Forgot password?
       </a> */}
 
-      <button type="submit" className="cursor-pointer [border:none] p-0 bg-dodgerblue absolute top-[260.5px] left-[calc(50%_-_185px)] rounded-3xl w-[363px] h-[51px]">
+      <button 
+      onClick={handleClick}
+      type="submit" className="cursor-pointer [border:none] p-0 bg-dodgerblue absolute top-[260.5px] left-[calc(50%_-_185px)] rounded-3xl w-[363px] h-[51px]">
         <div className="absolute top-[13px] left-[175.06px] text-base font-semibold font-roboto text-white text-center flex items-center justify-center w-[50.08px] h-[25px]">
           Sign in
         </div>
@@ -123,7 +140,7 @@ const handleSubmit=async(event)=> {
       <button className="cursor-pointer [border:none] p-0 bg-gray-900 absolute top-[400.5px] left-[0px] rounded-3xl shadow-[0px_0px_0px_1px_rgba(0,_0,_0,_0.75)] w-[363px] h-12 overflow-hidden">
         <a
           className="absolute top-[11px] left-[106.17px] text-base leading-[24px] font-semibold font-roboto text-gray-800 text-center flex items-center justify-center w-[195.84px] h-[25px] [text-decoration:none]"
-          href="/form"
+          href="/register"
         >
           New to BeFit? Join now
         </a>
