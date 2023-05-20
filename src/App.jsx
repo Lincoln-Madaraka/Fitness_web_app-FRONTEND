@@ -6,7 +6,7 @@ import {
 import Register from "./pages/Register";
 import Page from "./pages/LandingPage";
 import SignIn from "./pages/SignIn";
-import Quiz from "./pages/Quiz";
+import Quiz from "./pages/Quiz/Quiz";
 import Recepie from "./pages/Recepie";
 import { Provider } from "react-redux";
 import store from "./redux/store";
