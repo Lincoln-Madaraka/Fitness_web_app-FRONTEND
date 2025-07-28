@@ -15,6 +15,7 @@ function Navbar() {
           <div className="relative text-11xl leading-[80px] font-bold font-inter text-white text-left">
             befit
           </div>
+          <div className="flex items-center gap-4">
           <ThemeToggle />
           <img
             onClick={handleClick}
@@ -22,6 +23,7 @@ function Navbar() {
             alt=""
             src="/LandingPage/profile.png"
           />
+          </div>
         </div>
       </nav>
   );

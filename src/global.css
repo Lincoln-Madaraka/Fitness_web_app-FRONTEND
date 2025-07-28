@@ -19,6 +19,7 @@ body {
 @tailwind utilities;
 body {
   @apply leading-[normal] m-0;
+  @apply bg-white text-black dark:bg-black dark:text-white;
 }
 *,
 ::before,
