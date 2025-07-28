@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import ThemeToggle from "../ThemeToggle";
 
 function Navbar() {
 
@@ -14,6 +15,7 @@ function Navbar() {
           <div className="relative text-11xl leading-[80px] font-bold font-inter text-white text-left">
             befit
           </div>
+          <ThemeToggle />
           <img
             onClick={handleClick}
             className="relative w-[50px] h-10 shrink-0 object-cover"
